@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>北京二手房数据可视化分析</title>
+
+
+    <script src="js/echarts.min.js"></script>
+
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./fonts/icomoon.css">
+    
+</head>
+
+<body>
+    <div class="viewport">
+        <div class="column">
+        	
+        	<!--
+            <div class="overview panel">
+            
+                <div class="inner">
+                    <div class="item">
+                        <h4>2,190</h4>
+                        <span>
+                            <i class="icon-dot" style="color: #006cff"></i>
+                            设备总数
+                        </span>
+                    </div>
+                    <div class="item">
+                        <h4>190</h4>
+                        <span>
+                            <i class="icon-dot" style="color: #6acca3"></i>
+                            季度新增
+                        </span>
+                    </div>
+                    <div class="item">
+                        <h4>3,001</h4>
+                        <span>
+                            <i class="icon-dot" style="color: #6acca3"></i>
+                            运营设备
+                        </span>
+                    </div>
+                    <div class="item">
+                        <h4>108</h4>
+                        <span>
+                            <i class="icon-dot" style="color: #ed3f35"></i>
+                            异常设备
+                        </span>
+                    </div>
+                </div>
+                
+                
+            </div>-->
+            
+            <!--轮播-->
+            <div class="monitor panel">
+                <div class="inner">
+                    <div class="tabs">
+                        <a href="javascript:;" data-index="0" class="active">房价信息</a>
+                        <!--<a href="javascript:;" data-index="1">异常设备监控</a>-->
+                    </div>
+                    <div class="content" style="display: block;">
+                        <div class="head">
+                            <span class="col">所属小区</span>
+                            <span class="col">所属区域</span>
+                            <span class="col">总价</span>
+                        </div>
+                        <div class="marquee-view">
+                            <div class="marquee">
+                                <div class="row">
+                                    <span class="col">K2十里春风</span>
+                                    <span class="col">通州通州周边漷小路</span>
+                                    <span class="col">179.8</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">龙聚山庄</span>
+                                    <span class="col">延庆延庆周边110国道</span>
+                                    <span class="col">110</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">天洋城(北区)</span>
+                                    <span class="col">北京周边燕郊亿丰大街</span>
+                                    <span class="col">162</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">首尔甜城林荫大道</span>
+                                    <span class="col">北京周边燕郊燕灵路,近京秦高速</span>
+                                    <span class="col">168</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">首创澜茵山</span>
+                                    <span class="col">密云密云城区密关路</span>
+                                    <span class="col">170</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">岔道小区</span>
+                                    <span class="col">延庆八达岭京藏高速</span>
+                                    <span class="col">115</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">行宫南区</span>
+                                    <span class="col">密云密云城区檀西路</span>
+                                    <span class="col">248</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">莲水怡园</span>
+                                    <span class="col">通州马驹桥新海东路2号</span>
+                                    <span class="col">332</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">万科四季花城</span>
+                                    <span class="col">顺义石门顺白路</span>
+                                    <span class="col">407</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">裕华园一区</span>
+                                    <span class="col">怀柔怀柔城区龙芸路</span>
+                                    <span class="col">148</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">燕保祈东家园(一期)</span>
+                                    <span class="col">朝阳垡头化工路</span>
+                                    <span class="col">345</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">富丰园小区</span>
+                                    <span class="col">丰台看丹桥富丰路</span>
+                                    <span class="col">314</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">和悦春风</span>
+                                    <span class="col">大兴庞各庄瓜乡路</span>
+                                    <span class="col">265</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="content">
+                        <div class="head">
+                            <span class="col">异常时间</span>
+                            <span class="col">设备地址</span>
+                            <span class="col">异常代码</span>
+                        </div>
+                        <div class="marquee-view">
+                            <div class="marquee">
+                                <div class="row">
+                                    <span class="col">20190701</span>
+                                    <span class="col">北京市昌平区建材城西路金燕龙写字楼</span>
+                                    <span class="col">1000001</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">20190701</span>
+                                    <span class="col">北京市昌平区建材城西路金燕龙写字楼</span>
+                                    <span class="col">1000002</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">20190703</span>
+                                    <span class="col">北京市昌平区建材城西路金燕龙写字楼</span>
+                                    <span class="col">1000002</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">20190704</span>
+                                    <span class="col">北京市昌平区建材城西路金燕龙写字楼</span>
+                                    <span class="col">1000002</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">20190705</span>
+                                    <span class="col">北京市昌平区建材城西路金燕龙写字楼</span>
+                                    <span class="col">1000002</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">20190706</span>
+                                    <span class="col">北京市昌平区建材城西路金燕龙写字楼</span>
+                                    <span class="col">1000002</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">20190707</span>
+                                    <span class="col">更多模板关注公众号【DreamCoders】</span>
+                                    <span class="col">1000002</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">20190708</span>
+                                    <span class="col">北京市昌平区建材城西路金燕龙写字楼</span>
+                                    <span class="col">1000002</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">20190709</span>
+                                    <span class="col">北京市昌平区建材城西路金燕龙写字楼</span>
+                                    <span class="col">1000002</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">20190710</span>
+                                    <span class="col">北京市昌平区建材城西路金燕龙写字楼</span>
+                                    <span class="col">1000002</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+            <!--朝向-->
+            <div class="point panel">
+                <div class="inner">
+                    <h3>朝向分布统计</h3>
+                    <div class="chart">
+                        <div class="pie"></div>
+                        <div class="data">
+                            <div class="item">
+                                <h4>1167</h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #ed3f35"></i>
+                                    房屋总数
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h4>37.11%</h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #eacf19"></i>
+                                    朝向最多
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <!-- 地图 -->
+            <div class="map">
+                <h3>
+                    <span class="icon-cube"></span>
+                    地图
+                </h3>
+                <div class="chart">
+                	<div class="geo"></div>
+                </div>
+            </div>
+            <!-- 房价走势 -->
+            <div class="users panel">
+                <div class="inner">
+                    <h3>北京市二手房房价走势</h3>
+                    <div class="chart">
+                        <div class="bar"></div>
+                        <div class="data">
+                            <div class="item">
+                                <h4>⬆235套</h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #ed3f35"></i>
+                                     3.03%
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h4>⬇2027套</h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #eacf19"></i>
+                                    2.10%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="order panel">
+                <div class="inner">
+                    <!-- 筛选 -->
+                    <div class="filter">
+                        <a href="javascript:;" data-key="HD" class="active">海淀区</a>
+                        <a href="javascript:;" data-key="ZY">朝阳区</a>
+                        <a href="javascript:;" data-key="XC">西城区</a>
+                        <a href="javascript:;" data-key="DC">东城区</a>
+                    </div>
+                    <!-- 数据 -->
+                    <div class="data">
+                        <div class="item">
+                            <h4>9501.7</h4>
+                            <span>
+                                <i class="icon-dot" style="color: #ed3f35;"></i>
+                                21年GDP(亿元)
+                            </span>
+                        </div>
+                        <div class="item">
+                            <h4>8.8</h4>
+                            <span>
+                                <i class="icon-dot" style="color: #eacf19;"></i>
+                                增速（%）
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 楼层 -->
+            <div class="sales panel">
+                <div class="inner">
+                    <div class="caption">
+                        <h3>各楼层房价走势</h3>
+                        <a href="javascript:;" class="active" data-type="low">低楼层</a>
+                        <a href="javascript:;" data-type="middle">中楼层</a>
+                        <a href="javascript:;" data-type="high">高楼层</a>
+                    </div>
+                    <div class="chart">
+                        <div class="label">单位:元/㎡</div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 渠道 季度 -->
+            <div class="wrap">
+                <!--<div class="channel panel">
+                    <div class="inner">
+                        <h3>渠道分布</h3>
+                        <div class="data">
+                            <div class="item">
+                                <h4>39 <small>%</small></h4>
+                                <span>
+                                    <i class="icon-plane"></i>
+                                    机场
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h4>28 <small>%</small></h4>
+                                <span>
+                                    <i class="icon-bag"></i>
+                                    商场
+                                </span>
+                            </div>
+                        </div>
+                        <div class="data">
+                            <div class="item">
+                                <h4>20 <small>%</small></h4>
+                                <span>
+                                    <i class="icon-train"></i>
+                                    地铁
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h4>13 <small>%</small></h4>
+                                <span>
+                                    <i class="icon-bus"></i>
+                                    火车站
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quarter panel">
+                    <div class="inner">
+                        <h3>一季度销售进度</h3>
+                        <div class="chart">
+                            <div class="box">
+                                <div class="gauge"></div>
+                                <div class="label">75<small> %</small></div>
+                            </div>
+                            <div class="data">
+                                <div class="item">
+                                    <h4>1,321</h4>
+                                    <span>
+                                        <i class="icon-dot" style="color: #6acca3"></i>
+                                        销售额(万元)
+                                    </span>
+                                </div>
+                                <div class="item">
+                                    <h4>150%</h4>
+                                    <span>
+                                        <i class="icon-dot" style="color: #ed3f35"></i>
+                                        同比增长
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+            <!-- 排行榜 -->
+            <div class="top panel">
+                <div class="inner">
+                    <div class="all">
+                        <h3>散点图</h3>
+                        <div id="test" style="width:350px; height: 350px;">
+                    </div>
+                    <!--<div class="province">
+                        <h3>各省热销 <i class="date">// 近30日 //</i></h3>
+                        <div class="data">
+                            <ul class="sup">
+                                <li>
+                                    <span>北京</span>
+                                    <span>25,179 <s class="icon-up"></s></span>
+                                </li>
+                                <li>
+                                    <span>河北</span>
+                                    <span>23,252 <s class="icon-down"></s></span>
+                                </li>
+                                <li>
+                                    <span>上海</span>
+                                    <span>20,760 <s class="icon-up"></s></span>
+                                </li>
+                                <li>
+                                    <span>江苏</span>
+                                    <span>23,252 <s class="icon-down"></s></span>
+                                </li>
+                                <li>
+                                    <span>山东</span>
+                                    <span>20,760 <s class="icon-up"></s></span>
+                                </li>
+                            </ul>
+                            <ul class="sub">
+                                
+                            </ul>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById("test"));
+    
+    // 指定图表的配置项和数据
+    
+  
+const hr = [[35961, 52]];
+const my = [[24026, 168]];
+const cp = [[46179, 110]];
+const sy = [[36804, 41]];
+const pg = [[20213, 16]];
+const mtg = [[35961, 14]];
+
+const hd = [[110671, 40]];
+const sjs = [[55590, 10]];
+const xc = [[137205, 12]];
+const dc = [[105410, 16]];
+const zy = [[77878, 131]];
+const dx = [[41003, 106]];
+const fs = [[28208, 165]];
+const yq = [[20029, 43]];
+const tz = [[23212, 115]];
+const ft = [[61414, 58]];
+const bjzb = [[12833, 70]];
+
+const schema = [
+  { name: 'mean', index: 0, text: '单价' },
+  { name: 'num', index: 1, text: '数量' }
+];
+
+const itemStyle = {
+  opacity: 0.8,
+  shadowBlur: 10,
+  shadowOffsetX: 0,
+  shadowOffsetY: 0,
+  shadowColor: 'rgba(0,0,0,0.3)'
+};
+option = {
+  color: [
+    '#dd4444',
+    '#9955FF',
+    '#80F1BE',
+    '#77FFCC ',
+    '#33FFDD',
+    '#33CCFF',
+    '#5599FF',
+    '#CCBBFF',
+    '#fec42c',
+    '#FFFF00',
+    '#FF88C2',
+    '#FF8888',
+    '#FFDDAA',
+    '#99FF99',
+    '#AAFFEE',
+    '#66FFFF',
+    '#F0BBFF'
+  ],
+
+  grid: {
+    left: '10%',
+    right: '15%',
+    top: '25%',
+    bottom: '10%'
+  },
+  tooltip: {
+    backgroundColor: 'rgba(255,255,255,0.7)',
+    formatter: function (param) {
+      var value = param.value;
+      // prettier-ignore
+      return '<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">'
+                + param.seriesName + ': ' + value[1] 
+                + '</div>'
+                + schema[0].text + '：' + value[0] + '<br>';
+    }
+  },
+  xAxis: {
+    type: 'value',
+    name: '单价',
+    nameGap: 16,
+    nameTextStyle: {
+      fontSize: 16
+    },
+    axisLine:{
+        lineStyle:{
+        color:'#4c9bfd',
+        width:1,//这里是为了突出显示加上的
+    }
+        },
+    axisLabel: {
+     color: '#4c9bfd'
+     },
+    splitLine: {
+      show: false
+    }
+  },
+  yAxis: {
+    type: 'value',
+    name: '房源数量',
+    nameLocation: 'end',
+    nameGap: 20,
+    nameTextStyle: {
+      fontSize: 16
+    },
+    axisLine:{
+        lineStyle:{
+        color:'#4c9bfd',
+        width:1,//这里是为了突出显示加上的
+    }
+        },
+    axisLabel: {
+     color: '#4c9bfd'
+     },
+    splitLine: {
+      show: true,
+      lineStyle:{
+           color: ['#696969'],
+           type: 'solid'
+      }
+    },
+
+  },
+  visualMap: [
+    {
+      left: 'right',
+      top: '8%',
+      dimension: 1,
+      min: 0,
+      max: 300,
+      itemWidth: 10,
+      itemHeight: 40,
+      calculable: true,
+      precision: 0.1,
+      text: ['数量'],
+      textStyle: {
+                 color: '#4c9bfd'
+                            },
+      textGap: 30,
+      inRange: {
+        symbolSize: [10, 60]
+      },
+      outOfRange: {
+        symbolSize: [10, 70],
+        color: ['rgba(255,255,255,0.4)']
+      },
+      controller: {
+        inRange: {
+          color: ['#4c9bfd']
+        },
+        outOfRange: {
+          color: ['#999']
+        }
+      }
+    }
+  ],
+  series: [
+    {
+      name: '怀柔区',
+      type: 'scatter',
+      itemStyle: itemStyle,
+      data: hr
+    },
+    {
+      name: '密云区',
+      type: 'scatter',
+      itemStyle: itemStyle,
+      data: my
+    },
+    {
+      name: '昌平区',
+      type: 'scatter',
+      itemStyle: itemStyle,
+      data: cp
+    },
+    {
+      name: '顺义区',
+      type: 'scatter',
+      itemStyle: itemStyle,
+      data: sy
+    },
+    {
+      name: '平谷区',
+      type: 'scatter',
+      itemStyle: itemStyle,
+      data: pg
+    },
+    {
+      name: '门头沟区',
+      type: 'scatter',
+      itemStyle: itemStyle,
+      data: mtg
+    },
+    {
+      name: '海淀区',
+      type: 'scatter',
+      itemStyle: itemStyle,
+      data: hd
+    },
+    {
+      name: '石景山区',
+      type: 'scatter',
+      itemStyle: itemStyle,
+      data: sjs
+    },
+    {
+      name: '西城区',
+      type: 'scatter',
+      itemStyle: itemStyle,
+      data: xc
+    },
+    {
+      name: '东城区',
+      type: 'scatter',
+      itemStyle: itemStyle,
+      data: dc
+    },
+    {
+      name: '朝阳区',
+      type: 'scatter',
+      itemStyle: itemStyle,
+      data: zy
+    },
+    {
+      name: '大兴区',
+      type: 'scatter',
+      itemStyle: itemStyle,
+      data: dx
+    },
+    {
+      name: '房山区',
+      type: 'scatter',
+      itemStyle: itemStyle,
+      data: fs
+    },
+    {
+      name: '延庆区',
+      type: 'scatter',
+      itemStyle: itemStyle,
+      data: yq
+    },
+    {
+      name: '通州区',
+      type: 'scatter',
+      itemStyle: itemStyle,
+      data: tz
+    },
+    {
+      name: '丰台区',
+      type: 'scatter',
+      itemStyle: itemStyle,
+      data: ft
+    },
+    {
+      name: '北京周边',
+      type: 'scatter',
+      itemStyle: itemStyle,
+      data: bjzb
+    }
+  ]
+};
+
+    
+     
+    
+    // 使用刚指定的配置项和数据显示图表。
+    
+    myChart.setOption(option);
+</script> 
+
+<script src="js/jquery.min.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/index.js"></script>
+
+<script src="js/beijing.js"></script>
+<script src="js/mymap.js"></script>
+
+
+
+</html>
